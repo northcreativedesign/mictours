@@ -105,6 +105,12 @@ body {
 // Footer Section
 
 footer {
+  a {
+    color: white;
+    &:hover {
+      color: black;
+    }
+  }
   .upper-footer {
     height: 24.938rem;
     @include breakpoint(medium only) {
