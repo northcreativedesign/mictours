@@ -1,0 +1,69 @@
+{{!-- This is the base layout for your project, and will be used on every page. --}}
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-80534401-10"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-80534401-10');
+    </script>
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lity/2.3.0/lity.min.css">
+    <link rel="stylesheet" href="{{root}}assets/css/app.css">
+  </head>
+  <body>
+
+    {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+    {{> navigation}}
+    {{> body}}
+    {{> footer}}
+
+    <script src="{{root}}assets/js/app.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+
+        $('#contactform').submit(function(event) {
+            event.preventDefault();
+
+            var contactform = $('#contactform');
+            var formresult = $('#formresult');
+            var formdata = $(contactform).serialize();
+
+            $.ajax({
+                type: 'POST',
+                url: $(contactform).attr('action'),
+                data: formdata,
+
+                beforeSend: function() {
+                    $(formresult).removeClass();
+                    $(formresult).addClass('alert alert-info');
+                    $(formresult).html("<span class='glyphicon glyphicon-refresh gly-spin' aria-hidden='true'></span>");
+                },
+                success:function(response) {
+                    $(formresult).removeClass();
+                    $(formresult).addClass('alert alert-success');
+                    $(formresult).html(response);
+                },
+                error:function(data) {
+                    $(formresult).removeClass();
+                    $(formresult).addClass('alert alert-warning');
+                    $(formresult).html(data.responseText);
+                }
+            });
+
+        });
+
+
+    });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,187 @@
+@charset 'utf-8';
+
+@import 'settings';
+@import 'foundation';
+@import 'motion-ui';
+@import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900";
+
+@include foundation-global-styles;
+// @include foundation-grid;
+@include foundation-flex-grid;
+//
+@include foundation-xy-grid-classes;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+// @include foundation-range-input;
+@include foundation-accordion;
+@include foundation-accordion-menu;
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-card;
+@include foundation-close-button;
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-responsive-embed;
+@include foundation-label;
+@include foundation-media-object;
+@include foundation-off-canvas;
+@include foundation-orbit;
+@include foundation-pagination;
+@include foundation-progress-bar;
+@include foundation-slider;
+@include foundation-sticky;
+@include foundation-reveal;
+@include foundation-switch;
+@include foundation-table;
+@include foundation-tabs;
+@include foundation-thumbnail;
+@include foundation-title-bar;
+@include foundation-tooltip;
+@include foundation-top-bar;
+@include foundation-visibility-classes;
+// @include foundation-float-classes;
+@include foundation-flex-classes;
+
+// @include foundation-prototype-classes;
+
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+@import "components/global";
+
+// Navigation
+
+.top-bar {
+  font-family: $barlow;
+  height: 111px;
+  background-color: #5e1b0d;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+  li {
+    margin-top: 7px;
+  }
+  @include breakpoint(small) {
+    height: auto;
+  }
+  @include breakpoint(medium only) {
+    a {
+      font-size: 13px;
+      padding: 1rem 0.5rem;
+    }
+  }
+  ul {
+    background-color: transparent;
+    color: white;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.menu-text {
+  span {
+    margin-right: 8px;
+    margin-top: -5px;
+  }
+}
+
+@import "components/index";
+@import "components/about";
+@import "components/directory";
+@import "components/tours";
+@import "components/contact";
+@import "components/history";
+
+// Footer Section
+
+footer {
+  .upper-footer {
+    height: 24.938rem;
+    @include breakpoint(medium only) {
+      height: auto;
+    }
+    @include breakpoint(small only) {
+      height: auto;
+    }
+    background-color: #822e08;
+    p, h5, h6 {
+      color: white;
+      font-family: $sourcesans;
+    }
+    h5 {
+      margin-top:  40px;
+      font-weight: 700;
+    }
+    h6 {
+      font-weight: 600;
+    }
+    p {
+      font-weight: 500;
+    }
+    .left-section {
+      padding-left: 40px;
+      @include breakpoint(small only) {
+        text-align: center;
+        padding: 0;
+      }
+    }
+    .middle-section {
+      text-align: center;
+      margin-top: 40px;
+        .hollow {
+          color: white;
+          border: 1px solid white;
+      }
+    }
+    span {
+      padding-left: 15px;
+      color: white;
+      font-size: 1.125rem;
+      font-weight: 700
+    }
+    .right-section {
+      img {
+        display: block;
+        margin: 0 auto;
+        margin-top: 50px;
+        @include breakpoint(small only) {
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+  .lower-footer {
+    background-color: #3f1501;
+    p {
+      color: white;
+      font-size: 0.9rem;
+      margin-top: 10px;
+      text-align: center;
+      a {
+        color: white;
+        &:hover {
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+/* Button Drop Shadow */
+
+.button-drop {
+  position: relative;
+  z-index: 100;
+  &:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+  &:active {
+    transform: translateY(1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+  }
+}

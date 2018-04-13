@@ -1,0 +1,224 @@
+// ======================================
+//             ABOUT PAGE
+// ======================================
+
+#about-hero-section {
+  .grid-container {
+    padding: 0;
+  }
+
+.responsive-embed,
+.flex-video {
+    margin-bottom: 0;
+ }
+
+ .button {
+   position: relative;
+   z-index: 100;
+   margin-top: 25%;
+   background-color: transparent;
+   color: white;
+   border: solid 3px white;
+   height: 70px;
+   width: 250px;
+   border-radius: 15px;
+   padding: 0.55em 1em;
+   &:hover {
+     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+   }
+   &:active {
+     transform: translateY(1px);
+     box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+   }
+ }
+ a {
+   font-family: $burfordbase;
+   font-size: 2rem;
+   text-transform: uppercase;
+   color: #563725;
+ }
+ text-align: center;
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.banner .stamp .block {
+	font-size: 1.25rem;
+	margin: 5rem auto 0;
+	background-color: #009775;
+}
+.banner .stamp .block:hover {
+
+	background-color: #fff;
+}
+.banner .stamp .block:hover span {
+	color: #009775 !important;
+}
+.stamp svg {
+	fill: #fff;
+}
+
+// Header Section
+  #about-header-section {
+    text-align: center;
+    h1 {
+      margin-top: 70px;
+      margin-bottom: 50px;
+    }
+    p {
+      padding: 0 20px;
+      @include breakpoint(medium) {
+        padding: 0 50px;
+      }
+      @include breakpoint(large) {
+        padding: 0 100px;
+      }    }
+  }
+
+// Photo Section
+
+#about-photo-section {
+  .grid-container {
+    margin-top: 70px;
+  }
+  img {
+    margin-bottom: 30px;
+  }
+}
+
+// Lower Hero section
+
+.lower-about-strip {
+  margin-top: 70px;
+  height: 11px;
+  background-color: #a1a1a1;
+}
+
+#our-story-section {
+  .grid-container {
+    padding: 0;
+  }
+  .about-lower-hero {
+    margin-top: -2px;
+    background-image: url(../img/about_hero_lower.png);
+    height: 785px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    @include breakpoint(medium only) {
+      background-size: cover;
+    }
+    @include breakpoint(xlarge) {
+      background-size: cover;
+      background-position: top;
+    }
+    .about-hero-details {
+      margin-top: 30px;
+      @include xy-cell(55%);
+      margin-left: 45%;
+      @include breakpoint(medium only) {
+        margin-top: 5px;
+        margin-left: 50%;
+      }
+    }
+    p {
+      padding-right: 25px;
+      line-height: 1.4rem;
+      letter-spacing: 0px;
+    }
+    h3 {
+      font-family: $bettertimes;
+      font-size: 4.438rem;
+      color: #ad5025;
+      text-align: center;
+      margin-bottom: 0px;
+      &:nth-child(4) {
+        margin-bottom: -80px;
+      }
+      &:nth-child(5) {
+        margin-bottom: -30px;
+      }
+    }
+  }
+
+  @include breakpoint(small only) {
+    .about-lower-hero {
+      background-size: cover;
+    }
+    .about-hero-details {
+      text-align: center;
+    p {
+      padding-right: 25px;
+      line-height: 1.4rem;
+      letter-spacing: 0px;
+    }
+    h3 {
+      font-family: $bettertimes;
+      font-size: 4.438rem;
+      color: #ad5025;
+      text-align: center;
+      margin-bottom: 0px;
+      &:nth-child(4) {
+        margin-bottom: -80px;
+      }
+      &:nth-child(5) {
+        margin-bottom: -30px;
+      }
+    }
+  }
+ }
+}
+
+.container {
+  position: relative;
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  transition: .5s ease;
+   background-color: transparent;
+    &:hover {
+    background-color: rgba(0, 0 ,0, 0.5);
+    color: white;
+    h5, h3, p {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+}
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  h5, h3, p {
+    color: rgba(0, 0, 0, 0);
+    text-align: center;
+    font-family: $sourcesans;
+  }
+  h3 {
+    font-weight: 700;
+  }
+}

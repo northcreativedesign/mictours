@@ -1,0 +1,45 @@
+.contact-hero {
+  background-image: url(../img/contact_hero.jpg);
+  height: 750px;
+  background-position: center;
+  background-size: cover;
+}
+
+#contact-form-section {
+  margin-top: -60px;
+  h4 {
+    text-align: center;
+    color: white;
+    font-family: $burfordbase;
+    font-size: 3.688rem;
+    font-weight: 400;
+    line-height: 4.626rem;
+    text-transform: uppercase;
+  }
+  .card {
+    border: none;
+    p {
+      text-align: center;
+      color: #4c4c4c;
+      font-family: $sourcesans;
+      font-size: 1.063rem;
+      padding-top: 20px;
+    }
+  }
+  .card-divider {
+    height: 5.813rem;
+    background-color: #362f2d;
+  }
+  .card-section {
+    border: 0.063rem solid #b7b7b7;
+    .button {
+      float: right;
+      background-color: #b12a10;
+      color: white;
+      font-family: $burfordbase;
+      font-size: 1.813rem;
+      height: 3.125rem;
+      padding-top: 10px;
+    }
+  }
+}

@@ -1,0 +1,192 @@
+
+
+#directory-hero-section {
+  .grid-container {
+    padding: 0;
+  }
+  .directory-hero {
+    background-image: url(../img/hero_directory_medium.png);
+    height: 700px;
+    background-size: cover;
+    h1 {
+      color: #ad5025;
+      font-family: $bettertimes;
+      text-align: right;
+      font-size: 7.938rem;
+      padding-right: 40px;
+      position: relative;
+      z-index: 1;
+    }
+    h3 {
+      color: #563725;
+      font-family: $burfordbase;
+      font-size: 4rem;
+      text-align: right;
+      margin-top: -80px;
+      padding-right: 90px;
+    }
+    h4 {
+      color: #987b6a;
+      font-family: $burfordbase;
+      font-size: 2.5rem;
+      text-align: center;
+      padding-right: 50px;
+      padding-left: 800px;
+      margin-top: -10px;
+      &:last-child {
+        margin-top: -25px;
+      }
+    }
+  }
+}
+
+// Card Styling
+
+.download-permits {
+  padding-top: 40px;
+}
+
+
+#directory-card-section {
+  .grid-container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  margin-top: -35px;
+  .card-divider {
+    height: 4.625rem;
+  }
+  .card {
+    .food-card {
+      background-color: #998675;
+      h5 {
+        text-align: center;
+        color: white;
+        font-size: 2rem;
+        font-family: $sourcesans;
+      }
+    }
+    .lodging-card {
+      background-color: #736357;
+        h5 {
+          text-align: center;
+          color: white;
+          font-size: 2rem;
+          font-family: $sourcesans;
+        }
+     }
+     .permits-card {
+        background-color: #534741;
+         h5 {
+           text-align: center;
+           color: white;
+           font-size: 2rem;
+           font-family: $sourcesans;
+         }
+     }
+     .emergency-card {
+       background-color: #790000;
+       h5 {
+         text-align: center;
+         color: white;
+         font-size: 2rem;
+         font-family: $sourcesans;
+       }
+     }
+     .vehicle-card {
+       background-color: #ad5025;
+       h5 {
+         text-align: center;
+         color: white;
+         font-size: 2rem;
+         font-family: $sourcesans;
+       }
+     }
+     h6 {
+      color: #474747;
+      font-family: $sourcesans;
+      font-size: 29px;
+     }
+  }
+  .card-section {
+    .grid-container {
+      padding: 0;
+    }
+  }
+  .law-card {
+    background-color: #903b14;
+    h5 {
+      text-align: center;
+      color: white;
+      font-size: 2rem;
+      font-family: $sourcesans;
+    }
+  }
+  .law-inner {
+    h6 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 0.9rem;
+    }
+    .small-6 {
+      text-align: center;
+      p {
+        font-size: 1.25rem;
+      }
+    }
+    a {
+      color: black;
+      &:hover {
+        color: #903b14;
+      }
+    }
+  }
+  .advisory-card {
+    background-color: #342d29;
+      h5 {
+        text-align: center;
+        color: white;
+        font-size: 2rem;
+        font-family: $sourcesans;
+      }
+    }
+}
+
+
+// Directory Strip
+
+.directory-strip {
+  height: 10px;
+  background-color: #534741;
+}
+
+.directory-lower-strip {
+  height: 0.375rem;
+}
+.food-strip {
+  background-color: #998675;
+}
+.lodging-strip {
+  background-color: #736357;
+}
+.permits-strip {
+  background-color: #534741;
+}
+.emergency-strip {
+  background-color: #790000;
+}
+.vehicle-strip {
+  background-color: #ad5025;
+}
+.law-strip {
+  background-color: #903b14;
+}
+.lower-directory-details {
+  margin-top: 30px;
+  p {
+    padding: 0 100px;
+    text-align: center;
+    color: #c00000;
+  }
+}
