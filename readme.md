@@ -1,5 +1,3 @@
-Final Check List Post Launch
+# Features Needing Added
 
--- Fix Any Mobile Errors
--- Setup Facebook Meta Cards
--- Finish Video
+Add Individual Videos With About Profiles
